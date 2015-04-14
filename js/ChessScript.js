@@ -1,4 +1,6 @@
-
+/**
+ * Created by justinmiller on 4/2/15.
+ */
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
@@ -42,25 +44,6 @@ objLoader.load("/assets/models/" + pieceInfo[0].name + ".obj", function(object) 
             child.rotation.y = 1.7;
             scene.add(child);
             animatePawn(pawn);
-        }
-    });
-});
-
-var knight;
-
-objLoader.load("/assets/models/" + pieceInfo[2].name + ".obj", function(object) {
-    object.traverse( function ( child ) {
-
-        if (child instanceof THREE.Mesh) {
-            knight = child;
-            child.material = new THREE.MeshLambertMaterial({color: 0x555555});
-            child.position.set(1,-1.2,.4);
-            child.scale.set(.025, .025, .025);
-            child.rotation.z = -.1;
-            child.rotation.x = 1.6;
-            child.rotation.y = 1.7;
-            scene.add(child);
-            animateKnight(knight);
         }
     });
 });
@@ -162,7 +145,7 @@ var TweenDown = function(piece) {
 var TweenSpacesUp = function(piece, spaces) {
     var position = piece.position;
     var target = {y: position.y + tile.translate*spaces};
-    var tween = new TWEEN.Tween(piece.position).to(target, 2000);
+    var tween = new TWEEN.Tween(piece.position).to(target, 3000);
     tween.onUpdate(function() {
         piece.position.y = position.y;
     });
@@ -172,7 +155,7 @@ var TweenSpacesUp = function(piece, spaces) {
 var TweenSpacesDiagonal = function(piece, spacesX, spacesY) {
     var position = piece.position;
     var target = {y: position.y + tile.translate*spacesY, x: position.x +tile.translate*spacesX};
-    var tween = new TWEEN.Tween(piece.position).to(target, 2000);
+    var tween = new TWEEN.Tween(piece.position).to(target, 3000);
     tween.onUpdate(function() {
         piece.position.y = position.y;
         piece.position.x = position.x;
@@ -183,15 +166,6 @@ var TweenSpacesDiagonal = function(piece, spacesX, spacesY) {
 function animatePawn(pawn) {
     var tweenUp = TweenUp(pawn);
     var tweenOneUp = TweenSpacesDiagonal(pawn, 3, 3);
-    var tweenDown = TweenDown(pawn);
-    tweenUp.chain(tweenOneUp);
-    tweenOneUp.chain(tweenDown);
-    tweenUp.start();
-}
-
-function animateKnight(knight) {
-    var tweenUp = TweenUp(pawn);
-    var tweenOneUp = TweenSpacesDiagonal(knight, 3, 3);
     var tweenDown = TweenDown(pawn);
     tweenUp.chain(tweenOneUp);
     tweenOneUp.chain(tweenDown);
