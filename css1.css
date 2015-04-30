@@ -4,7 +4,8 @@ body {
 
 .floating_img {
 	width: 1200px;
-	background: url(http://wallpaperscraft.com/image/82968/2560x1440.jpg) 50% 0px / cover fixed;
+	background: url(http://wallpaperscraft.com/image/82968/2560x1440.jpg) fixed;
+	background-size: cover;
 	margin: 0 auto;
 }
 
