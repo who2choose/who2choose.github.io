@@ -1,0 +1,126 @@
+body {
+    background-color: #111111;
+}
+
+.floating_img {
+	width: 1200px;
+	background: url(http://wallpaperscraft.com/image/82968/2560x1440.jpg) 50% 0px / cover fixed;
+	margin: 0 auto;
+}
+
+.size {
+	height: 300px;
+	width: 1200px;
+	margin: 0 auto;
+	border-top: 2px solid #111111;
+	border-bottom: 2px solid #111111;
+}
+
+.div1{
+	height: 250px;
+	width: 250px;
+	float: left;
+	margin: 25px 75px;
+	background-color: #333333;
+	transition: border-radius 0.5s ease, background-color 1s ease;
+}
+
+.div1:hover {
+	background-color: #555555;
+	border-radius: 5vw;
+}
+
+.div2 {
+}
+ 
+.title {
+	text-align: center;
+    font-family: 'Londrina Solid';
+	color: #9b1b01;
+	padding: 25px 150px;
+}
+ 
+.title h1 {
+	font-size: 5em;
+	margin-top: 0;
+}
+
+.title p {
+	font-size: 2em;
+}
+
+.container {
+    overflow: hidden;
+	height: 150px;
+    margin: 0 auto;
+    background: black;
+}
+
+.photobanner {
+    height: 150px;
+    width: 3500px;
+}
+
+.photobanner img {
+	width: 300px;
+	height: 150px;
+}
+
+/*keyframe animations*/
+.first {
+    -webkit-animation: bannermove 30s linear infinite;
+       -moz-animation: bannermove 30s linear infinite;
+        -ms-animation: bannermove 30s linear infinite;
+         -o-animation: bannermove 30s linear infinite;
+            animation: bannermove 30s linear infinite;
+}
+ 
+@keyframes "bannermove" {
+ 0% {
+    margin-left: 0px;
+ }
+ 100% {
+    margin-left: -1775px;
+ }
+ 
+}
+ 
+@-moz-keyframes bannermove {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -1775px;
+ }
+ 
+}
+ 
+@-webkit-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -1775px;
+ }
+ 
+}
+ 
+@-ms-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -1775px;
+ }
+ 
+}
+ 
+@-o-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -1775px;
+ }
+ 
+}
