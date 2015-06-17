@@ -30,9 +30,6 @@ body {
 	background-color: #555555;
 	border-radius: 5vw;
 }
-
-.div2 {
-}
  
 .title {
 	text-align: center;
@@ -55,73 +52,4 @@ body {
 	height: 150px;
     margin: 0 auto;
     background: black;
-}
-
-.photobanner {
-    height: 150px;
-    width: 3500px;
-}
-
-.photobanner img {
-	width: 300px;
-	height: 150px;
-}
-
-/*keyframe animations*/
-.first {
-    -webkit-animation: bannermove 30s linear infinite;
-       -moz-animation: bannermove 30s linear infinite;
-        -ms-animation: bannermove 30s linear infinite;
-         -o-animation: bannermove 30s linear infinite;
-            animation: bannermove 30s linear infinite;
-}
- 
-@keyframes "bannermove" {
- 0% {
-    margin-left: 0px;
- }
- 100% {
-    margin-left: -1775px;
- }
- 
-}
- 
-@-moz-keyframes bannermove {
- 0% {
-   margin-left: 0px;
- }
- 100% {
-   margin-left: -1775px;
- }
- 
-}
- 
-@-webkit-keyframes "bannermove" {
- 0% {
-   margin-left: 0px;
- }
- 100% {
-   margin-left: -1775px;
- }
- 
-}
- 
-@-ms-keyframes "bannermove" {
- 0% {
-   margin-left: 0px;
- }
- 100% {
-   margin-left: -1775px;
- }
- 
-}
- 
-@-o-keyframes "bannermove" {
- 0% {
-   margin-left: 0px;
- }
- 100% {
-   margin-left: -1775px;
- }
- 
 }
